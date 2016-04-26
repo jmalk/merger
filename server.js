@@ -11,7 +11,7 @@ var machineConfig = { 'I Am a' : 'Machine' };
 var humanConfig = { 'I Am a' : 'Human', 'honest': true };
 
 app.get('/', function(req, res) {
-    var mergeResult = _.merge(machineConfig, humanConfig);
+    var mergeResult = _.merge({}, machineConfig, humanConfig);
     res.json(mergeResult);
 });
 
